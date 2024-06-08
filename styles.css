@@ -1,0 +1,233 @@
+body {
+    font-family: "DM Sans", sans-serif; /*DM Sans by default*/
+    margin: 0;
+    padding: 0; /*default margin and padding to 0*/
+    font-weight: 500;
+    font-optical-sizing: auto; /*some browser feature that makes fonts easier to read...*/
+    background-color: #0d1a2e;
+}
+
+#thewholeworld {
+    max-width: 1280px;
+    margin: auto;
+    background-color: #d4dbeb;
+    
+}
+
+
+header {
+    background-color: rgb(74, 87, 114);
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo */
+.logo {
+    height: 40px;
+}
+
+nav ul { /* Nav bar flexbox */
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li { /* flexbox elements */
+    margin-left: 1rem;
+}
+
+/* buttons in the flexbox */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+footer {
+    background-color: rgb(74, 87, 114);
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+/* footer flexbox */
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*footer flexbox elements*/
+footer nav ul li {
+    margin-left: 1rem;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+footer nav ul li a:hover {
+    font-weight: bold;
+}
+
+/* HERO BANNER */
+.hero-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-banner img {
+    width: 100%;
+    max-height: 92vh;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#081f42;
+    width: 100%;
+    font-size: 2em;
+}
+
+.banner-text h1{
+    margin: 20px auto;
+    font-size: 3em;
+    font-style:italic;
+    color: rgb(142, 177, 241);
+}
+
+.banner-text img{
+    width:auto;
+    display:block;
+    margin-inline:auto;
+    margin-bottom: 1em;
+}
+
+/* Call to action button on hero banner */
+.cta-button {
+    background-color: #7499c4;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.cta-button:hover{
+    background-color: #89add6;
+}
+
+/*default for main content area*/
+.bodycon {
+    width: 75%;
+    padding: 1.5em;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 1.5em auto;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #b0c6df;
+}
+
+.bodycon h2,.bodycon h3{
+    margin-block: 0.4em;
+    color: rgb(92, 126, 190);
+}
+
+.bodycon p{
+    color: rgb(74, 87, 114);
+    font-size: 1.05em;
+}
+
+.magpielist{
+    color: rgb(74, 87, 114);
+    font-size: 1.05em;
+}
+
+.bodycon p em{
+    background-color: rgb(141, 161, 206);
+    color:#ebf4ff;
+    font-style: normal;
+}
+
+/* Page-specific Styles */
+body.home .introduction {
+    background-color: #ecf0f1;
+}
+
+/* GALLERY STUFF CSS GRID W/E*/
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8em;
+    padding: 0em;
+    margin: 1em auto;
+}
+
+.maingrid {
+    width: 75%;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgb(133, 159, 189);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlaytext {
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-justify: auto;
+    width:80%;
+}
+
+.magscribble {
+    background-image: url("images/magbg.png");
+    background-size: cover;
+}
+
+.smallcon {
+    padding-block: 0.3em;
+}
