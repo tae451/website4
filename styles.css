@@ -107,7 +107,28 @@ footer nav ul li a:hover {
     font-size: 3em;
     font-style:italic;
     color: rgb(142, 177, 241);
+
+    background: linear-gradient(270deg, #be6eff, #a073f5, #7499c4, #7499c4, #68bbff, #51adeb);
+    background-size: 250% 250%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 6s ease infinite;
 }
+
+/* i love css keyframes hehe left to right to left */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*make it only go left if i have time*/
 
 .banner-text img{
     width:auto;
@@ -164,18 +185,16 @@ footer nav ul li a:hover {
     font-style: normal;
 }
 
-/* Page-specific Styles */
-body.home .introduction {
-    background-color: #ecf0f1;
-}
 
 /* GALLERY STUFF CSS GRID W/E*/
+/* Using grid here in case I want to add another row of images */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 0.8em;
     padding: 0em;
     margin: 1em auto;
+    grid-auto-flow: dense;
 }
 
 .maingrid {
@@ -223,11 +242,140 @@ body.home .introduction {
     width:80%;
 }
 
+/*socialsver*/
+
+.socials-grid {
+    display: flex; /*flexbox is fine here since socials are always going in one row */
+    justify-content: space-between;
+    gap: 0.8em;
+    padding: 0em;
+    margin: 1em auto;
+    grid-auto-flow: dense;
+}
+
+.socials-item {
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: rgb(133, 159, 189);
+    max-height: 160px;
+}
+
+.socials-item img {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.socials-item .socials-logo img{
+    width: 20%;
+    height: auto;
+    display: inline;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-justify: auto;
+    transition: .3s ease;
+}
+.socials-item:hover .socials-logo img{
+    opacity:0;
+}
+
+.socials-item:hover .social-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.socials-item:hover .social-overlay div{
+    color: rgb(255, 255, 255);
+    transition: .3s ease;
+}
+
+.social-overlay {
+    position: absolute;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+    transition: .3s ease;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.socials-item:hover .soc-twt {
+    background-color: rgba(44, 92, 121, 0.5);
+}
+.socials-item:hover .soc-yt {
+    background-color: rgba(139, 0, 0, 0.5);
+}
+.socials-item:hover .soc-disc {
+    background-color: rgba(44, 39, 112, 0.5);
+}
+.socials-item:hover .soc-insta {
+    background-color: rgba(128, 46, 114, 0.5);
+}
+
+.social-overlaytext {
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-justify: auto;
+    width:80%;
+    color: rgba(255, 255, 255, 0);
+}
+
+
+
+/*ok*/
+
 .magscribble {
     background-image: url("images/magbg.png");
     background-size: cover;
 }
 
 .smallcon {
-    padding-block: 0.3em;
+    padding-block: 0.5em;
+}
+
+.click-email {
+    color: #155cc5;
+}
+
+/* contact form.. */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.1em;
+}
+
+.contact-form label {
+    padding-bottom: 0.2em;
+}
+
+label {
+    font-size: 1.1em;
+    color: rgb(74, 87, 114);
+}
+
+input, textarea {
+    padding: 0.5em;
+    border: 2px solid rgb(133, 159, 189);
+    border-radius: 5px;
+    font-size: 1em;
+    resize: none;
+}
+
+.sub-button {
+    max-width: 30%;
 }
