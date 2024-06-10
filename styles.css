@@ -156,7 +156,7 @@ footer nav ul li a:hover {
     width: 75%;
     padding: 1.5em;
     box-sizing: border-box;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin: 1.5em auto;
     border-radius: 15px;
     border-style: solid;
@@ -187,10 +187,14 @@ footer nav ul li a:hover {
 
 
 /* GALLERY STUFF CSS GRID W/E*/
-/* Using grid here in case I want to add another row of images */
+/* grid here in case I want to add another row of images */
 .gallery-grid {
+    /*
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    */
+    display: flex; 
+    justify-content: space-between;
     gap: 0.8em;
     padding: 0em;
     margin: 1em auto;
@@ -245,12 +249,11 @@ footer nav ul li a:hover {
 /*socialsver*/
 
 .socials-grid {
-    display: flex; /*flexbox is fine here since socials are always going in one row */
+    display: flex; 
     justify-content: space-between;
     gap: 0.8em;
     padding: 0em;
     margin: 1em auto;
-    grid-auto-flow: dense;
 }
 
 .socials-item {
@@ -272,7 +275,7 @@ footer nav ul li a:hover {
 }
 
 .socials-item .socials-logo img{
-    width: 20%;
+    width: 30%;
     height: auto;
     display: inline;
     top: 50%;
@@ -284,7 +287,7 @@ footer nav ul li a:hover {
     transition: .3s ease;
 }
 .socials-item:hover .socials-logo img{
-    opacity:0;
+    opacity: 0;
 }
 
 .socials-item:hover .social-overlay {
@@ -304,21 +307,24 @@ footer nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.45);
 }
 
-.socials-item:hover .soc-twt {
-    background-color: rgba(44, 92, 121, 0.5);
+.socials-item:hover #soc-twt {
+    background-color: rgba(32, 88, 122, 0.5);
 }
-.socials-item:hover .soc-yt {
+.socials-item:hover #soc-yt {
     background-color: rgba(139, 0, 0, 0.5);
 }
-.socials-item:hover .soc-disc {
+.socials-item:hover #soc-disc {
     background-color: rgba(44, 39, 112, 0.5);
 }
-.socials-item:hover .soc-insta {
+.socials-item:hover #soc-insta {
     background-color: rgba(128, 46, 114, 0.5);
+}
+.socials-item:hover #soc-linked {
+    background-color: rgba(96, 88, 134, 0.5);
 }
 
 .social-overlaytext {
-    font-size: 1rem;
+    font-size: 1.2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -378,4 +384,24 @@ input, textarea {
 
 .sub-button {
     max-width: 30%;
+}
+
+/* for refs page */
+.ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.8em;
+    padding: 0em;
+    margin: 1em auto;
+    grid-auto-flow: dense;
+}
+
+.ref-item {
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(133, 159, 189);
+    padding: 2em;
 }
