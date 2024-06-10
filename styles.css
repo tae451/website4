@@ -1,5 +1,5 @@
 body {
-    font-family: "DM Sans", sans-serif; /*DM Sans by default*/
+    font-family: "DM Sans", "Arial", sans-serif; /*DM Sans by default*/
     margin: 0;
     padding: 0; /*default margin and padding to 0*/
     font-weight: 500;
@@ -26,7 +26,7 @@ header {
     justify-content: space-between;
 }
 
-/* logo */
+/* logo yeah */
 .logo {
     height: 40px;
 }
