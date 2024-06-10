@@ -5,6 +5,8 @@ body {
     font-weight: 500;
     font-optical-sizing: auto; /*some browser feature that makes fonts easier to read...*/
     background-color: #0d1a2e;
+
+    --blueBorder: rgb(133, 159, 189); 
 }
 
 #thewholeworld {
@@ -211,7 +213,8 @@ footer nav ul li a:hover {
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
-    border-color: rgb(133, 159, 189);
+    border-color: var(--blueBorder, rgb(133, 159, 189));
+    margin: 0;
 }
 
 .gallery-item img {
@@ -262,7 +265,7 @@ footer nav ul li a:hover {
     border-style: solid;
     border-width: 3px;
     border-radius: 10px;
-    border-color: rgb(133, 159, 189);
+    border-color: var(--blueBorder, rgb(133, 159, 189));
     max-height: 160px;
 }
 
